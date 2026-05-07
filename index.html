@@ -132,14 +132,7 @@
     background-size: 220px 220px;
   }
 
-  /* Vignette */
-  .vignette {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 999;
-    background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.45) 100%);
-  }
+
 
   /* ═══════════════════════════════════════════════
      NAV — floating glass
@@ -522,7 +515,7 @@
   }
   .hero-sub {
     max-width: 620px;
-    margin: 0 auto 56px;
+    margin: 0 auto 0;
     animation: fadeUp 1s var(--ease-out) 0.3s both;
     color: var(--ink-1);
     opacity: 0.78;
@@ -535,12 +528,12 @@
     animation: fadeUp 1s var(--ease-out) 0.45s both;
   }
   .hero-meta {
-    margin-top: 110px;
+    margin-top: 96px;
     display: flex;
     justify-content: center;
     gap: 0;
     flex-wrap: wrap;
-    animation: fadeUp 1s var(--ease-out) 0.6s both;
+    animation: fadeUp 1s var(--ease-out) 0.45s both;
     padding: 0;
     border-top: 1px solid var(--ink-line);
     border-bottom: 1px solid var(--ink-line);
@@ -569,8 +562,8 @@
   .hero-scroll {
     position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     z-index: 4;
     font-size: 10px;
     letter-spacing: 0.3em;
@@ -579,9 +572,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     animation: fadeUp 1s var(--ease-out) 0.9s both;
     font-weight: 500;
+    text-align: center;
+    width: 100%;
   }
   .hero-scroll-line {
     width: 1px;
@@ -1806,7 +1802,6 @@
 <!-- ═══════ ATMOSPHERE — fixed background system ═══════ -->
 <div class="atmosphere"></div>
 <div class="grain"></div>
-<div class="vignette"></div>
 
 <!-- ═══════ NAV ═══════ -->
 <nav class="nav">
@@ -1838,10 +1833,6 @@
     <p class="lead hero-sub">
       Marketing digital com direção, narrativa e percepção de valor. Construído para empresas que decidiram parar de competir por preço.
     </p>
-    <div class="hero-cta">
-      <a href="#manifesto" class="btn">Ver proposta <span class="btn-arrow">→</span></a>
-      <a href="#investimento" class="btn btn-ghost">Ir para investimento</a>
-    </div>
     <div class="hero-meta">
       <span>Format Agência</span>
       <span>Branding · Marketing</span>
@@ -1852,31 +1843,6 @@
   <div class="hero-scroll">
     <span>Role para começar</span>
     <div class="hero-scroll-line"></div>
-  </div>
-</section>
-
-<!-- ═══════ MANIFESTO ═══════ -->
-<section class="manifesto" id="manifesto">
-  <div class="container read">
-    <div class="eyebrow">Ponto de partida</div>
-    <div class="manifesto-stack">
-      <p class="manifesto-line">
-        A maioria das empresas acredita que crescer no digital depende apenas de <strong>postar mais.</strong>
-      </p>
-      <div class="manifesto-divider"></div>
-      <p class="manifesto-line accent">
-        Mas <strong>presença</strong> não significa <strong>posicionamento.</strong>
-      </p>
-      <div class="manifesto-divider"></div>
-      <p class="manifesto-line">
-        Todos os dias, marcas publicam constantemente e continuam invisíveis. Sem percepção de valor. Sem autoridade. Sem conexão real.
-      </p>
-      <div class="manifesto-divider thick"></div>
-      <p class="manifesto-line final">
-        O problema quase nunca é falta de conteúdo.<br>
-        <strong>O problema é falta de direção.</strong>
-      </p>
-    </div>
   </div>
 </section>
 
